@@ -1,0 +1,18 @@
+### 단축키
+- soutv : 작성시, print 객체 나옴
+- Command + Option + V : 변수 추출
+- Command + Option + m : 메소드 추출
+- Command + Option + n : 인라인 = 중복된 코드 추합
+- command + p : 메소드 파라미터 힌트 보기 
+- ctrl + shift + / : /* */
+- ctrl + / : //
+- command + shift + T : 테스트 파일 생성
+- command + e : 최근 연 파일 목록들 조회
+- command + 1 : 인텔리제이 사이드 메뉴 열고 닫기.
+- option + command + b : 인터페이스 인경우 impl 하고 있는 구현체로 바로 이동
+- option + shift + 클릭 : 인텔리제이 다중 커서, 다중 선택
+- F2 : Class 내 오류 난 곳으로 이동
+- F6 : 클래스 추출 (클래스 이름 드래그 후 f6 ➡️ 상위 클래스 추출 혹은 클래스 패키지 이동)
+- ctrl + g : 같은 단어 선택
+
+[file] - [settings] - [keymap] -> 단축키 찾을 수 있음
