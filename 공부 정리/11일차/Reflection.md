@@ -20,12 +20,12 @@ Object instance = clazz.getDeclaredConstructor().newInstance();
 ```
 - 특정 클래스의 메소드 호출
 ```
-Method method = clazz.getMethod("length");
+Method method = clazz.getDeclaredMethod("length");
 Object returnValue = method.invoke(instance);
 ```
 - 특정 클래스의 필드 값 변경 및 검색
 ```
-Field field = clazz.getField("field");
+Field field = clazz.getDeclaredField("field");
 // 만약 field의 접근자가 private라면 아래처럼 먼저 access 권한을 획득하고 변환한 다음 다시 닫아야 한다.
 // field.setAccessible(true);
 field.set(instance, "new value");
