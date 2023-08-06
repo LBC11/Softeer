@@ -35,3 +35,33 @@
 - 그렇기에 위의 전제를 이용하여 Heap영역을 다음과 같이 나누어 GC가 발생하도록 하였다.
 - Young 영역(Young Generation)
 - Old 영역(Old Generation) 
+
+### Young 영역(Young Generation)
+- 대부분의 객체가 생성되고 제거되는 영역
+- Minor GC가 일어나는 영역
+- Eden, Survivor1, Survivor2 영역으로 나눠진다.
+- 상대적으로 영역의 크기가 작다
+
+### Eden
+- 새롭게 생성되는 객체가 할당되는 영역, 단 객체의 크기가 너무 크면 Old 영역에 할당된다.
+- Minor GC에서 살아남은 객체들은 Survivor 영역으로 보낸다.
+
+### Survivor
+- 최소 1번의 GC에서 살아남은 객체들이 할당되는 영역
+- Survivor1, Survivor2 둘 중 하나만 사용하고 다른 하나는 비어있다.
+- Minor, Survivor1에서 Minor GC후 -> Survivor2로 재할당
+- Minor, Survivor2에서 Minor GC후 -> Survivor1 재할당
+
+### Old 영역(Old Generation)
+- Young 영역에서 오랫동안 살아남은(age가 일정 이상인) 객체가 재할당되는 장소
+- Major GC가 일어나는 영역
+- 상대적으로 영역의 크기가 크다.
+
+### Minor GC
+- Young 영역에서 Eden 영역이 가득 차면 발생
+- Young 영역의 크기가 작으므로 실행속도가 빠르다.
+- 일정 이상 살아남은 객체는 Old 영역으로 재할당(promotion) 된다.
+
+### Major GC
+- Old 영역이 가득 차면 발생
+- Old 영역의 크기가 크므로 실행속도가 상대적으로 느리다.
